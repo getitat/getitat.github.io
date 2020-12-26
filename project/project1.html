@@ -1,77 +1,10 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Kezia Thomas" />
-    
-    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
-    <title>Project 1</title>
-    <meta name="generator" content="Hugo 0.79.0" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
-    
-    <!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
+---
+title: "Project 1"
+author: "Kezia Thomas"
+date: "2020-12-11"
+output: html_document
+---
 
-    
-  </head>
-
-  <body>
-    <div id="wrap">
-      
-      <nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/"><i class="fa fa-home"></i></a>
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="navbar-collapse collapse" id="navbar">
-      <ul class="nav navbar-nav navbar-right">
-      
-        
-        <li><a href="/post/">BLOG</a></li>
-        
-        <li><a href="/projects/">PROJECTS</a></li>
-        
-        <li><a href="/resume/">RESUME</a></li>
-        
-      
-      </ul>
-    </div>
-  </div>
-</nav>
-
-      <div class="container">
-        <div class="blog-post">
-          <h3>
-            <strong><a href="/project/project1/">Project 1</a></strong>
-          </h3>
-        </div>
- 
-<div class="blog-title">
-          <h4>
-         December 11, 2020 
-            &nbsp;&nbsp;
-            
-          </h4>
-        </div>
-
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <div class="blogpost">
-              
-<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
 
 <pre><code>
@@ -272,20 +205,20 @@ cors %&gt;% as.data.frame %&gt;% rownames_to_column %&gt;% pivot_longer(-1) %&gt
     ylab(&quot;&quot;) + coord_fixed() + theme(axis.text.x = element_text(angle = 90, 
     hjust = 1, size = 8)) + scale_fill_gradient2(low = &quot;skyblue2&quot;, 
     high = &quot;indianred2&quot;)</code></pre>
-<p><img src="/project/project1_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="public/project/project1_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>letitgo %&gt;% ggplot(aes(x = State, y = Income.2016, color = VoteforTrump)) + 
     geom_point(size = 2) + geom_line(aes(group = VoteforTrump)) + 
     theme_dark() + theme(axis.text.x = element_text(angle = 90, 
     vjust = 0.2, size = 8, face = &quot;bold&quot;)) + xlab(&quot;State&quot;) + 
     ylab(&quot;Per Capita Income&quot;) + ggtitle(&quot;Income&quot;)</code></pre>
-<p><img src="/project/project1_files/figure-html/unnamed-chunk-5-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="public/project/project1_files/figure-html/unnamed-chunk-5-2.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>letitgo %&gt;% ggplot(aes(x = reorder(State, Adv), y = Adv, color = DemorRep)) + 
     geom_bar(stat = &quot;summary&quot;) + coord_flip() + theme_light() + 
     theme(text = element_text(size = 8)) + scale_color_manual(&quot;legend&quot;, 
     values = c(Dem = &quot;dodgerblue1&quot;, Swing = &quot;gold1&quot;, Rep = &quot;tomato3&quot;)) + 
     scale_y_continuous(n.breaks = 7) + xlab(&quot;State&quot;) + ylab(&quot;% with Advanced Degrees&quot;) + 
     ggtitle(&quot;Higher Education&quot;)</code></pre>
-<p><img src="/project/project1_files/figure-html/unnamed-chunk-5-3.png" width="672" style="display: block; margin: auto;" />
+<p><img src="public/project/project1_files/figure-html/unnamed-chunk-5-3.png" width="672" style="display: block; margin: auto;" />
 <em>There is 0.91 correlation between percent of people who received a bachelor’s degree and an advanced degree. There is also a strong postive correlation between percent of people who obtained advanced degrees, bachelor degrees and high school diplomas with per capita income in 2016. There’s also a negative correlation between States won by President Trump and percent of people who obtained bachelors and advanced degrees and per capita income in 2016. The amount of money spend on public school students is correlated with income in 1970 with a coefficient of 0.6 and with income in 2016 with a coefficient of 0.56. Furthermore, a higher urban population correlates with a higher income in 1970. Arrests for assault and murder are correlated with arrests for murder. Additionally, murder is negatively correlated with percent of students who graduated high school with a coefficient of -0.70. </em></p>
 <p><em>In the second graph, States with a higher income per capita did not vote for President Trump whereas States who had relatively less income per capita voted for Trump. In the third graph, States that had a higher proprtion of the population with advanced degrees leaned politically towards the Democratic Party whereas those states with a lesser percent of people with advanced degreed leaned Republican. </em></p>
 <pre class="r"><code># install.packages(&#39;cluster&#39;)
@@ -307,7 +240,7 @@ for (i in 2:10) {
 }
 ggplot() + geom_line(aes(x = 1:10, y = sil_width)) + scale_x_continuous(name = &quot;k&quot;, 
     breaks = 1:10)</code></pre>
-<p><img src="/project/project1_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="public/project/project1_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>pam3 &lt;- pam(gower1, k = 2, diss = T)  #tell pam you are using dissimilarities
 pam3</code></pre>
 <pre><code>## Medoids:
@@ -343,7 +276,7 @@ pam3</code></pre>
 ## [1] &quot;medoids&quot;    &quot;id.med&quot;     &quot;clustering&quot; &quot;objective&quot;  &quot;isolation&quot; 
 ## [6] &quot;clusinfo&quot;   &quot;silinfo&quot;    &quot;diss&quot;       &quot;call&quot;</code></pre>
 <pre class="r"><code>plot(pam3, which = 2)</code></pre>
-<p><img src="/project/project1_files/figure-html/unnamed-chunk-6-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="public/project/project1_files/figure-html/unnamed-chunk-6-2.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>gower1 %&gt;% as.matrix %&gt;% as.data.frame %&gt;% rownames_to_column %&gt;% 
     pivot_longer(-1, values_to = &quot;distance&quot;) %&gt;% filter(rowname != 
     name) %&gt;% filter(distance %in% c(min(distance), max(distance))) %&gt;% 
@@ -390,62 +323,6 @@ pam3</code></pre>
 ## 2           No      Dem</code></pre>
 <pre class="r"><code>library(GGally)
 ggpairs(dat2, aes(color = as.factor(pam3$clustering)), cardinality_threshold = 51)</code></pre>
-<p><img src="/project/project1_files/figure-html/unnamed-chunk-6-3.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="public/project/project1_files/figure-html/unnamed-chunk-6-3.png" width="672" style="display: block; margin: auto;" /></p>
 <p><em>Categorical and numeric variables were used in Pam analysis. Therefore, a gower metric was used to calculate the similarities. Some columns were dropped because it was difficult to analyze the visualization graph with multiple variables present. The removal of variables were determined such that the silhouette width was closer to a reasonable structure. Using silhouette width is highest when k=2, so 2 clusters were chosen. Pam was then run. A silhouette width of 0.58 was observed which tells us that there could be a reasonable structure present, however it as at the low border of the values.</em></p>
 <p><em>Next, the states closest in distance were determined. South Carolina and Tennessee are closest to each other, whereas Idaho and Maryland are furthest in similarities between each other. Computing summary statistics based on the clusters, cluster 1 had the lower percent of advanced degrees, less money spend on public school expenditure and had more arrests for murder. Next, the proportion of categoric variables present in each cluster was analyzed. Cluster 1 constituted wholly of States that voted for President Trump and cluster 2 included states that did not vote for President Trump. From the graph, the clusters can be differentiated for proportion of people with advanced degrees, by per capita income in 2016 and states who leaned toward Republican and Democratic parties. This makes sense as we saw a stronger correlation between these variables earlier. </em></p>
-
-            
-        <hr>         <div class="related-posts">
-                <h5>Related Posts</h5>
-                
-              </div> 
-            </div>
-          </div>
-
-   <hr>  <div class="disqus">
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-
-    (function() {
-      
-      
-      if (window.location.hostname == "localhost")
-        return;
-
-      var disqus_shortname = '';
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div> 
-        </div>
-      </div>
-    </div>
-
-    
-    <footer>
-  <div id="footer">
-    <div class="container">
-      <p class="text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
-      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
-    </div>
-  </div>
-</footer>
-<div class="footer"></div>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="/js/docs.min.js"></script>
-<script src="/js/main.js"></script>
-
-<script src="/js/ie10-viewport-bug-workaround.js"></script>
-
-
-    
-  </body>
-</html>
